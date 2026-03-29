@@ -1,14 +1,5 @@
 @use "./base.scss";
 
-// ── Pretendard 폰트 폴백 (Google Fonts에서 로드 안 될 경우) ──
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
-
-// ── 전체 기본 스타일 ──
-body {
-    font-family: "Pretendard Variable", "Pretendard", -apple-system,
-        BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-}
-
 // ── 메인 페이지 타이틀 강조 ──
 article>h1:first-of-type {
     font-size: 2rem;
@@ -121,7 +112,7 @@ a.internal.tag-link {
     border-radius: 12px;
 }
 
-// ── 스크롤바 커스텀 (선택사항) ──
+// ── 스크롤바 커스텀 ──
 ::-webkit-scrollbar {
     width: 6px;
 }
