@@ -23,8 +23,8 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Pretendard",
-        body: "Pretendard",
+        header: "IBM Plex Sans KR",
+        body: "IBM Plex Sans KR",
         code: "JetBrains Mono",
       },
       colors: {
