@@ -342,14 +342,15 @@ a.internal.tag-link {
         display: block;
 
         // 고해상도 디스플레이(Retina)에서 더욱 선명하게 보이도록 그림자 농도를 조절합니다.
-        filter: drop-shadow(0 6px 15px rgba(56, 124, 109, 0.12));
+        // 다크모드에서 로고가 묻히지 않도록 은은한 빛(Glow) 추가
+        filter: drop-shadow(0 0 15px rgba(109, 163, 151, 0.2));
 
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); // 조금 더 탄력 있는 애니메이션
+        transition: all 0.4s ease;
 
         &:hover {
-            transform: scale(1.02) translateY(-8px); // 커진 로고에 맞춰 움직임의 폭을 키웠습니다.
+            transform: scale(1.02) translateY(-5px); // 커진 로고에 맞춰 움직임의 폭을 키웠습니다.
             opacity: 1;
-            filter: drop-shadow(0 12px 24px rgba(56, 124, 109, 0.18));
+            filter: drop-shadow(0 0 25px rgba(109, 163, 151, 0.4));
         }
     }
 }
@@ -403,6 +404,19 @@ footer {
     }
 }
 
+
+// ── 테마 강제 설정: 다크모드를 기본값으로 ──
+:root {
+    --light: #161916;
+    --lightgray: #2A2E2A;
+    --gray: #7A8A7A;
+    --darkgray: #D1D9D1;
+    --dark: #E8EDE4;
+    --secondary: #6DA397; // 초록+파랑 조화 (다크모드용)
+    --tertiary: #8EBDB3;
+    --highlight: rgba(109, 163, 151, 0.15);
+}
+
 // ══════════════════════════════════════════════
 //  다크모드 — 달빛 정원
 // ══════════════════════════════════════════════
@@ -450,6 +464,18 @@ footer {
     pre {
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     }
+}
+
+// 라이트모드로 전환했을 때만 색상 교체
+:root[saved-theme="light"] {
+    --light: #FBFDFB;
+    --lightgray: #E2E8E4;
+    --gray: #6A7A70;
+    --darkgray: #2D3A30;
+    --dark: #16241B;
+    --secondary: #2A6B5F;
+    --tertiary: #4A8C7F;
+    --highlight: rgba(42, 107, 95, 0.07);
 }
 
 // ══════════════════════════════════════════════
