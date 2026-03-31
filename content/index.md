@@ -7,9 +7,9 @@ date: 2026-03-31
 6년 차 데이터 엔지니어의 디지털 정원입니다. 🌿
 
 > [!abstract] 정원사 프로필
-> 🎯 **TARGET**: AI/ML Engineer
-> 📊 **BASE**: Data Engineer (6y+)
-> 🌱 **STATUS**: 성장 중 — 매일 조금씩 꽃피우는 중
+> - 🎯 **TARGET**: AI/ML Engineer
+> - 📊 **BASE**: Data Engineer (6y+)
+> - 🌱 **STATUS**: 성장 중 — 매일 조금씩 꽃피우는 중
 
 
 ## 🌿 Study Notes
