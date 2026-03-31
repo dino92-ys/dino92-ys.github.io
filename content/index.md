@@ -1,5 +1,5 @@
 ---
-title: 데이터 & AI 정원
+title: About Garden
 date: 2026-03-31
 ---
 

@@ -6,7 +6,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "이영선의 AI 학습 노트",
+    pageTitle: "Dino's Data Garden",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
