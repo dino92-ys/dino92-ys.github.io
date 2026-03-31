@@ -6,7 +6,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Dino's Data Garden",
+    pageTitle: "Dino's AI Garden",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
