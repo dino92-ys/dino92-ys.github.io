@@ -18,7 +18,7 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
         {/* 로고 이미지 추가 */}
         <img
           src={logoPath}
-          alt="Dino's Data Garden Logo"
+          alt="Dino's AI Garden Logo"
           className="site-logo"
         />
         {title}

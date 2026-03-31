@@ -28,7 +28,7 @@ const config: QuartzConfig = {
       colors: {
         lightMode: {
           // 배경: 완전한 흰색보다 눈이 편안한 아주 연한 민트 그레이 (가독성 베이스)
-          light: "#FBFDFB",
+          light: "#FDFDFA",
           // 테두리: 가독성을 방해하지 않는 선명한 구분선
           lightgray: "#E2E8E4",
           // 보조 텍스트: 기존보다 진하게 조정하여 읽기 쉽게 변경
