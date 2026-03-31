@@ -1,118 +1,343 @@
 @use "./base.scss";
 
-// ── 메인 페이지 타이틀 강조 ──
-article>h1:first-of-type {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.25rem;
+// ══════════════════════════════════════════════
+//  🌱 데이터 정원 (Data Garden) Theme
+//  Sage Green + Warm Off-White
+//  "데이터를 경작하고 지식을 꽃피우는 공간"
+// ══════════════════════════════════════════════
+
+// ── 배경: 미묘한 도트 패턴 (정원 흙 텍스처 느낌) ──
+body {
+    background-image: radial-gradient(circle,
+            var(--lightgray) 0.5px,
+            transparent 0.5px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
 }
 
-// ── 링크 호버 효과 부드럽게 ──
+// ══════════════════════════════════════════════
+//  히어로 타이틀 영역
+// ══════════════════════════════════════════════
+
+article>h1:first-of-type {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.3;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+
+    // 하단 새싹 라인
+    &::after {
+        content: "🌱";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1.2rem;
+        opacity: 0.7;
+    }
+}
+
+// ── 서브타이틀(h2) — 섹션 구분 ──
+article h2 {
+    font-weight: 700;
+    font-size: 1.35rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--lightgray);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+// ── 본문 첫 문단 (인트로) ──
+article>p:first-of-type {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--darkgray);
+    padding: 1rem 1.25rem;
+    background: var(--highlight);
+    border-radius: 12px;
+    border-left: 3px solid var(--secondary);
+}
+
+// ── 링크 호버 ──
 a {
     transition: color 0.2s ease, opacity 0.2s ease;
 
     &:hover {
-        opacity: 0.85;
+        opacity: 0.8;
     }
 }
 
-// ── 메인 페이지 섹션 리스트 → 카드 스타일 ──
+// ══════════════════════════════════════════════
+//  카드 레이아웃 — 글래스모피즘 + 식물 느낌
+// ══════════════════════════════════════════════
+
 article>ul {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1rem;
-    margin: 1.5rem 0;
+    margin: 1.25rem 0 2rem;
 
     >li {
-        background: var(--light);
-        border: 1px solid var(--lightgray);
-        border-radius: 12px;
-        padding: 1.25rem 1.5rem;
-        transition: border-color 0.2s ease, transform 0.15s ease;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(92, 122, 90, 0.15);
+        border-radius: 16px;
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition:
+            transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+            box-shadow 0.3s ease,
+            border-color 0.3s ease;
+
+        // 상단 컬러 바
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
         &:hover {
+            transform: translateY(-4px);
             border-color: var(--secondary);
-            transform: translateY(-2px);
+            box-shadow:
+                0 12px 32px rgba(92, 122, 90, 0.12),
+                0 4px 8px rgba(92, 122, 90, 0.06);
+
+            &::before {
+                opacity: 1;
+            }
         }
 
         a {
             font-weight: 600;
             font-size: 1.05rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        // 카드 안 설명 텍스트
+        em {
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-style: normal;
         }
     }
 }
 
-// ── 구분선 스타일 개선 ──
+// ══════════════════════════════════════════════
+//  프로필 뱃지 (callout 활용)
+// ══════════════════════════════════════════════
+
+.callout {
+    border-radius: 16px;
+    border: 1px solid rgba(92, 122, 90, 0.2);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    &[data-callout="info"],
+    &[data-callout="abstract"] {
+        background: linear-gradient(135deg,
+                rgba(92, 122, 90, 0.06),
+                rgba(143, 174, 107, 0.06));
+        border-color: rgba(92, 122, 90, 0.25);
+    }
+}
+
+// ══════════════════════════════════════════════
+//  그래프 뷰 — 정원 지도 느낌
+// ══════════════════════════════════════════════
+
+.graph {
+    border: 1px solid var(--lightgray);
+    border-radius: 20px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        border-color: var(--secondary);
+        box-shadow: 0 4px 20px rgba(92, 122, 90, 0.1);
+    }
+
+    >h3 {
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--gray);
+        margin-bottom: 0.5rem;
+    }
+
+    >svg {
+        border-radius: 14px;
+    }
+}
+
+// ══════════════════════════════════════════════
+//  목차(TOC) — 부드러운 카드
+// ══════════════════════════════════════════════
+
+.toc {
+    border: 1px solid var(--lightgray);
+    border-radius: 16px;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    .depth-1>li>a {
+        font-weight: 600;
+    }
+}
+
+// ══════════════════════════════════════════════
+//  탐색기(Explorer)
+// ══════════════════════════════════════════════
+
+#explorer {
+    ul>li>a {
+        transition: color 0.15s ease, padding-left 0.2s ease;
+        border-radius: 6px;
+        padding: 4px 8px;
+
+        &:hover {
+            color: var(--secondary);
+            padding-left: 14px;
+        }
+    }
+
+    button.explorer {
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+}
+
+// ══════════════════════════════════════════════
+//  구분선, 인용구, 코드 블록
+// ══════════════════════════════════════════════
+
 hr {
     border: none;
     height: 1px;
-    background: var(--lightgray);
+    background: linear-gradient(90deg,
+            transparent,
+            var(--lightgray) 15%,
+            var(--secondary) 50%,
+            var(--lightgray) 85%,
+            transparent);
     margin: 2.5rem 0;
+    opacity: 0.4;
 }
 
-// ── 코드 블록 스타일 개선 ──
-pre {
-    border-radius: 10px;
-    border: 1px solid var(--lightgray);
-}
-
-code {
-    font-family: "JetBrains Mono", "Fira Code", monospace;
-    font-size: 0.9em;
-}
-
-// ── 인용구 스타일 ──
 blockquote {
     border-left: 3px solid var(--secondary);
-    padding: 0.5rem 1.25rem;
+    padding: 0.75rem 1.25rem;
     margin: 1.5rem 0;
     color: var(--darkgray);
     font-style: italic;
     background: var(--highlight);
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 12px 12px 0;
 }
 
-// ── 태그 스타일 개선 ──
+pre {
+    border-radius: 14px;
+    border: 1px solid var(--lightgray);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+code {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.88em;
+}
+
+:not(pre)>code {
+    background: var(--highlight);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 0.84em;
+}
+
+// ══════════════════════════════════════════════
+//  태그 — 씨앗 뱃지 느낌
+// ══════════════════════════════════════════════
+
 a.internal.tag-link {
     background: var(--highlight);
-    border: 1px solid var(--lightgray);
+    border: 1px solid rgba(92, 122, 90, 0.2);
     border-radius: 20px;
-    padding: 2px 10px;
-    font-size: 0.85rem;
-    transition: background 0.2s ease;
+    padding: 3px 12px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
 
     &:hover {
         background: var(--secondary);
         color: var(--light);
         border-color: var(--secondary);
+        transform: translateY(-1px);
+        box-shadow: 0 3px 10px rgba(92, 122, 90, 0.2);
     }
 }
 
-// ── 탐색기(Explorer) 호버 효과 ──
-#explorer ul>li>a {
-    transition: color 0.15s ease;
-    border-radius: 6px;
-    padding: 2px 6px;
+// ══════════════════════════════════════════════
+//  사이트 타이틀
+// ══════════════════════════════════════════════
+
+.page-title {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+// ══════════════════════════════════════════════
+//  검색창
+// ══════════════════════════════════════════════
+
+#search-bar input {
+    border-radius: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+        border-color: var(--secondary);
+        box-shadow: 0 0 0 3px rgba(92, 122, 90, 0.1);
+    }
+}
+
+// ══════════════════════════════════════════════
+//  푸터
+// ══════════════════════════════════════════════
+
+footer {
+    opacity: 0.6;
+    font-size: 0.85rem;
+    transition: opacity 0.2s ease;
 
     &:hover {
-        color: var(--secondary);
+        opacity: 1;
     }
 }
 
-// ── 목차(TOC) 스타일 개선 ──
-.toc .depth-1>li>a {
-    font-weight: 600;
-}
+// ══════════════════════════════════════════════
+//  스크롤바
+// ══════════════════════════════════════════════
 
-// ── 그래프 뷰 배경 조정 ──
-.graph>svg {
-    border-radius: 12px;
-}
-
-// ── 스크롤바 커스텀 ──
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -124,4 +349,96 @@ a.internal.tag-link {
 ::-webkit-scrollbar-thumb {
     background: var(--gray);
     border-radius: 3px;
+
+    &:hover {
+        background: var(--secondary);
+    }
+}
+
+// ══════════════════════════════════════════════
+//  다크모드 — 달빛 정원
+// ══════════════════════════════════════════════
+
+:root[saved-theme="dark"] {
+    body {
+        background-image: radial-gradient(circle,
+                rgba(143, 174, 107, 0.06) 0.5px,
+                transparent 0.5px);
+    }
+
+    article>ul>li {
+        background: rgba(42, 46, 42, 0.7);
+        border-color: rgba(143, 174, 107, 0.15);
+
+        &:hover {
+            box-shadow:
+                0 12px 32px rgba(143, 174, 107, 0.08),
+                0 0 20px rgba(143, 174, 107, 0.04);
+        }
+    }
+
+    article>p:first-of-type {
+        background: rgba(143, 174, 107, 0.06);
+    }
+
+    .callout {
+        background: rgba(42, 46, 42, 0.6);
+        border-color: rgba(143, 174, 107, 0.2);
+
+        &[data-callout="info"],
+        &[data-callout="abstract"] {
+            background: rgba(92, 122, 90, 0.08);
+        }
+    }
+
+    .graph {
+        background: rgba(42, 46, 42, 0.5);
+    }
+
+    .toc {
+        background: rgba(42, 46, 42, 0.5);
+    }
+
+    pre {
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+// ══════════════════════════════════════════════
+//  애니메이션 — 페이지 로드 시 부드러운 등장
+// ══════════════════════════════════════════════
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+article {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+article>ul>li {
+    animation: fadeInUp 0.4s ease-out both;
+
+    @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{$i * 0.06}s;
+        }
+    }
+}
+
+// ══════════════════════════════════════════════
+//  텍스트 선택 색상
+// ══════════════════════════════════════════════
+
+::selection {
+    background: rgba(92, 122, 90, 0.2);
+    color: var(--dark);
 }
