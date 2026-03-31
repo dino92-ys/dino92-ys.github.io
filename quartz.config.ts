@@ -3,8 +3,6 @@ import * as Plugin from "./quartz/plugins"
 
 /**
  * Quartz 4 Configuration
- *
- * See https://quartz.jzhao.xyz/configuration for more information.
  */
 const config: QuartzConfig = {
   configuration: {
@@ -29,15 +27,23 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#F9F7F2",
-          lightgray: "#E8E4DA",
-          gray: "#A8A498",
-          darkgray: "#4A4A40",
-          dark: "#2C2C26",
-          secondary: "#5C7A5A",
-          tertiary: "#8FAE6B",
-          highlight: "rgba(92, 122, 90, 0.08)",
-          textHighlight: "#D4E4A0aa",
+          // 배경: 더 깨끗하고 아주 살짝 푸른빛이 도는 연한 민트/그레이 톤
+          light: "#F4F7F5",
+          // 테두리 및 구분선: 차분한 올리브 블루
+          lightgray: "#DEE5E0",
+          // 보조 텍스트: 채도가 낮은 녹회색
+          gray: "#8A9A8E",
+          // 본문 텍스트: 신뢰감 있는 짙은 청록색 계열의 차콜
+          darkgray: "#3A4D40",
+          // 제목 텍스트: 깊은 숲속의 짙은 녹색
+          dark: "#1B2E20",
+          // 메인 강조색(링크): 요청하신 초록 + 파랑의 조화 (Deep Sea Green)
+          secondary: "#387C6D",
+          // 보조 강조색(그래프 노드 등): 조금 더 밝은 청록색
+          tertiary: "#5E9387",
+          // 하이라이트: 은은한 에메랄드 블루 배경
+          highlight: "rgba(56, 124, 109, 0.1)",
+          textHighlight: "#BEE3DBaa",
         },
         darkMode: {
           light: "#1A1E1A",
@@ -88,7 +94,6 @@ const config: QuartzConfig = {
       Plugin.Static(),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
     ],
   },
