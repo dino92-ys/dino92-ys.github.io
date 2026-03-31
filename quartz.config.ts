@@ -27,34 +27,34 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          // 배경: 더 깨끗하고 아주 살짝 푸른빛이 도는 연한 민트/그레이 톤
-          light: "#F4F7F5",
-          // 테두리 및 구분선: 차분한 올리브 블루
-          lightgray: "#DEE5E0",
-          // 보조 텍스트: 채도가 낮은 녹회색
-          gray: "#8A9A8E",
-          // 본문 텍스트: 신뢰감 있는 짙은 청록색 계열의 차콜
-          darkgray: "#3A4D40",
-          // 제목 텍스트: 깊은 숲속의 짙은 녹색
-          dark: "#1B2E20",
-          // 메인 강조색(링크): 요청하신 초록 + 파랑의 조화 (Deep Sea Green)
-          secondary: "#387C6D",
-          // 보조 강조색(그래프 노드 등): 조금 더 밝은 청록색
-          tertiary: "#5E9387",
-          // 하이라이트: 은은한 에메랄드 블루 배경
-          highlight: "rgba(56, 124, 109, 0.1)",
-          textHighlight: "#BEE3DBaa",
+          // 배경: 완전한 흰색보다 눈이 편안한 아주 연한 민트 그레이 (가독성 베이스)
+          light: "#FBFDFB",
+          // 테두리: 가독성을 방해하지 않는 선명한 구분선
+          lightgray: "#E2E8E4",
+          // 보조 텍스트: 기존보다 진하게 조정하여 읽기 쉽게 변경
+          gray: "#6A7A70",
+          // 본문 텍스트: 가장 중요한 요소. 깊은 숲색으로 대비 극대화
+          darkgray: "#2D3A30",
+          // 제목 텍스트: 지적인 무게감을 주는 짙은 청록색 차콜
+          dark: "#16241B",
+          // 링크 및 강조: 영선님이 요청하신 초록+파랑의 조화 (가시성 높은 시안 블루)
+          secondary: "#2A6B5F",
+          // 보조 강조: 그래프 및 태그용
+          tertiary: "#4A8C7F",
+          // 하이라이트: 텍스트 뒤에 깔리는 은은한 비취색
+          highlight: "rgba(42, 107, 95, 0.07)",
+          textHighlight: "#CDEAE5aa",
         },
         darkMode: {
-          light: "#1A1E1A",
+          light: "#161916",
           lightgray: "#2A2E2A",
-          gray: "#6B7B68",
-          darkgray: "#CDD5C8",
+          gray: "#7A8A7A",
+          darkgray: "#D1D9D1",
           dark: "#E8EDE4",
-          secondary: "#8FAE6B",
-          tertiary: "#B8D48A",
-          highlight: "rgba(143, 174, 107, 0.12)",
-          textHighlight: "#5C7A5A55",
+          secondary: "#6DA397", // 다크모드에서도 초록+파랑 조화 유지
+          tertiary: "#8EBDB3",
+          highlight: "rgba(109, 163, 151, 0.15)",
+          textHighlight: "#2A6B5F55",
         },
       },
     },
