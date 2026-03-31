@@ -209,24 +209,46 @@ article>ul {
 }
 
 // ══════════════════════════════════════════════
-//  탐색기(Explorer)
+//  탐색기(Explorer) - 가독성 & 조화 최적화
 // ══════════════════════════════════════════════
 
 #explorer {
+    // 사이드바 폰트 크기를 살짝 키워 가독성 확보
+    font-size: 0.95rem;
+    line-height: 1.6;
+
     ul>li>a {
-        transition: color 0.15s ease, padding-left 0.2s ease;
-        border-radius: 6px;
-        padding: 4px 8px;
+        // 기존보다 더 깊이감 있는 청록색으로 텍스트 가시성 강화
+        color: var(--darkgray);
+        padding: 8px 14px; // 클릭 영역 확장 및 여백 확보
+        margin: 4px 0;
+        border-left: 2px solid transparent; // 기본 상태의 정렬 유지
 
         &:hover {
+            // 영선님의 '초록+파랑' 조화가 가장 돋보이는 구간
+            background-color: var(--highlight);
             color: var(--secondary);
-            padding-left: 14px;
+            border-left: 2px solid var(--secondary); // 세련된 강조 선
+            padding-left: 20px;
+            box-shadow: 2px 2px 8px rgba(42, 107, 95, 0.05);
+        }
+
+        // 현재 읽고 있는 페이지의 '확신'을 주는 스타일
+        &[aria-current="page"] {
+            color: var(--secondary);
+            font-weight: 700;
+            background-color: var(--highlight);
+            border-left: 3px solid var(--secondary);
         }
     }
 
-    button.explorer {
-        font-weight: 700;
-        letter-spacing: 0.02em;
+    // 폴더 제목의 무게감 조절 (지적인 무드)
+    .folder-title {
+        font-family: var(--headerFont);
+        font-size: 1.05rem;
+        color: var(--dark);
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
     }
 }
 
