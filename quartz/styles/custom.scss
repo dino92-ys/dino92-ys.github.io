@@ -213,9 +213,13 @@ article>ul {
 // ══════════════════════════════════════════════
 
 .explorer {
-    // 사이드바 폰트 크기를 살짝 키워 가독성 확보
-    font-size: 0.95rem;
-    line-height: 1.6;
+    // 좁아진 패널에서 긴 폴더명과 파일명이 불필요하게 줄바꿈되지 않도록 조정합니다.
+    font-size: 0.88rem;
+    line-height: 1.5;
+
+    .title-button h2 {
+        font-size: 0.95rem;
+    }
 
     ul>li>a {
         // 기존보다 더 깊이감 있는 청록색으로 텍스트 가시성 강화
@@ -245,7 +249,7 @@ article>ul {
     // 폴더 제목의 무게감 조절 (지적인 무드)
     .folder-title {
         font-family: var(--headerFont);
-        font-size: 1.05rem;
+        font-size: 0.95rem;
         color: var(--dark);
         margin-top: 1rem;
         margin-bottom: 0.5rem;
@@ -327,6 +331,37 @@ a.internal.tag-link {
     // 큰 로고와 기본 상단 여백이 겹쳐 탐색기가 화면 아래로 밀리는 것을 방지합니다.
     padding-top: 2rem;
     gap: 0.85rem;
+}
+
+@media (min-width: 801px) {
+    .page > #quartz-body {
+        // 본문 읽기 폭을 확보하면서 사이드바의 탐색 기능은 유지합니다.
+        grid-template-columns: 260px minmax(0, 1fr);
+    }
+
+    .page > #quartz-body .sidebar.left,
+    .page > #quartz-body .sidebar.right {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .page > #quartz-body .page-header {
+        margin-top: 2rem;
+    }
+
+    .page > #quartz-body .sidebar.right {
+        padding-top: 2rem;
+    }
+
+    .page > #quartz-body .page-header .article-title {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1201px) {
+    .page > #quartz-body {
+        grid-template-columns: 260px minmax(0, 1fr) 260px;
+    }
 }
 
 .page-title {
