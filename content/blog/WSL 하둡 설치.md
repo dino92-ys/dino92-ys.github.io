@@ -1,6 +1,7 @@
 ---
 date: '2023-07-17'
 title: WSL 하둡 설치
+draft: true
 ---
 ## 윈도우에 Ubuntu 설치
 

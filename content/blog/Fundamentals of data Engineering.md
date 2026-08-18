@@ -1,6 +1,7 @@
 ---
 date: '2023-08-16'
 title: Fundamentals of Data Engineering
+draft: true
 ---
 해당 내용을 공부하며 작성한 내용입니다.
 

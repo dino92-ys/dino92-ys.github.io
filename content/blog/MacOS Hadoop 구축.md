@@ -1,6 +1,7 @@
 ---
 date: '2023-08-26'
 title: MacOS Docker로 Hadoop 구축
+draft: true
 ---
 ## MacOS에 Docker 설치
 

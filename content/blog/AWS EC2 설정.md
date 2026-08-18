@@ -1,6 +1,7 @@
 ---
 date: '2023-07-06'
 title: AWS EC2 Ubuntu 설정
+draft: true
 ---
 ## AWS 설정
 

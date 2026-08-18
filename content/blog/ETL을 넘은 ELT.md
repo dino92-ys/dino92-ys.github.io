@@ -1,6 +1,7 @@
 ---
 date: '2023-07-18'
 title: ETL에서 ELT로의 변화
+draft: true
 ---
 ## ETL에서 ELT로 변화되는 과정
 

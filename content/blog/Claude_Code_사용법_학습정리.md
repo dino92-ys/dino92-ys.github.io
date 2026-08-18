@@ -1,6 +1,10 @@
-# Claude Code CLI 사용법 학습 정리
-
 ---
+title: Claude Code CLI 사용법 학습 정리
+date: 2026-08-12
+draft: true
+---
+
+# Claude Code CLI 사용법 학습 정리
 
 ## 1. Claude Code란?
 

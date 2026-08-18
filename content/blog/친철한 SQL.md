@@ -1,6 +1,7 @@
 ---
 date: '2023-05-21'
 title: 친절한 SQL
+draft: true
 ---
 #### 친절한 SQL 공부 중
 

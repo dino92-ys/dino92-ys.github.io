@@ -1,6 +1,7 @@
 ---
 date: '2023-10-06'
 title: AWS certified-cloud-practitioner
+draft: true
 ---
 ## AWS 인증 cloud-practitioner
 The AWS Certified Cloud Practitioner (CLF-C02) exam은 Pass-Fail 시험이다. 이 시험은 인증 업계 모범 사례와 가이드라인을 따르는 AWS 전문가가 정한 최소 기준에 따라 채점됩니다. 결과는 100-1000점 사이에서 결정되며 최소 시험 패스 점수는 700점이다. 
