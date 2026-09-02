@@ -1,6 +1,11 @@
 ---
 title: "노트 제목"
+doc_id: "NTE-001"
 date: YYYY-MM-DD
+created: YYYY-MM-DD
+modified: YYYY-MM-DD
+permalink: "/notes/domain/topic-slug"
+aliases: []
 tags:
   - 주제
 description: "정리할 개념, 도구 또는 명령어의 핵심을 한두 문장으로 작성합니다."
@@ -8,6 +13,8 @@ draft: true
 ---
 
 <!-- 이 파일을 복사해 content/notes/주제/ 아래에 개별 노트를 만듭니다. -->
+<!-- 파일명은 nte-001-topic-slug-YYYYMMDD.md 형식을 사용하고, doc_id와 날짜를 맞춥니다. -->
+<!-- 노트는 단일 Markdown 파일로 작성합니다. 자산이 필요한 경우 content-management.md의 기준을 먼저 확인합니다. -->
 <!-- Quartz가 frontmatter의 title을 문서 제목으로 표시하므로 본문에 H1 제목을 반복하지 않습니다. -->
 <!-- 하나의 개념, 도구 또는 명령어만 다루고 불필요한 섹션은 제거합니다. -->
 

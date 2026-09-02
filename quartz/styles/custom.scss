@@ -76,7 +76,9 @@ a {
 //  카드 레이아웃 — 글래스모피즘 + 식물 느낌
 // ══════════════════════════════════════════════
 
-article>ul {
+// 카드형 목록은 작성자가 card-list 클래스를 지정한 경우에만 적용합니다.
+// 일반 글의 절차·결과 목록은 Quartz 기본 목록 형태를 유지해야 합니다.
+article > ul.card-list {
     list-style: none;
     padding: 0;
     display: grid;
@@ -358,7 +360,8 @@ a.internal.tag-link {
     }
 }
 
-@media (min-width: 1201px) {
+// Quartz 기본 데스크톱 전환점(1200px)과 맞춰 그리드 영역·열 수를 일치시킵니다.
+@media (min-width: 1200px) {
     .page > #quartz-body {
         grid-template-columns: 260px minmax(0, 1fr) 260px;
     }

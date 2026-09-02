@@ -1,6 +1,11 @@
 ---
 title: "프로젝트 제목"
+doc_id: "PRJ-001"
 date: YYYY-MM-DD
+created: YYYY-MM-DD
+modified: YYYY-MM-DD
+permalink: "/projects/project-slug"
+aliases: []
 tags:
   - project
   - 기술명
@@ -8,6 +13,8 @@ draft: true
 ---
 
 <!-- 이 파일을 복사해 content/projects/ 아래에 새 프로젝트 글을 만듭니다. -->
+<!-- 폴더명은 prj-001-project-slug-YYYYMMDD 형식을 사용하고, doc_id와 날짜를 맞춥니다. -->
+<!-- 프로젝트 글과 전용 자산은 같은 폴더에 둡니다. 상세 기준은 content-management.md를 따릅니다. -->
 <!-- 공개 전에는 모든 안내 주석과 불필요한 섹션을 제거합니다. -->
 
 ## 한 줄 요약

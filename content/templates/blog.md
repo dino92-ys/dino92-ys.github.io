@@ -1,6 +1,11 @@
 ---
 title: "글 제목"
+doc_id: "BLG-001"
 date: YYYY-MM-DD
+created: YYYY-MM-DD
+modified: YYYY-MM-DD
+permalink: "/blog/topic-slug"
+aliases: []
 tags:
   - 주제
 description: "글에서 다루는 질문과 독자가 얻을 내용을 한두 문장으로 작성합니다."
@@ -8,6 +13,8 @@ draft: true
 ---
 
 <!-- 이 파일을 복사해 content/blog/ 아래에 새 글을 만듭니다. -->
+<!-- 파일명은 blg-001-topic-slug-YYYYMMDD.md 형식을 사용하고, doc_id와 날짜를 맞춥니다. -->
+<!-- 블로그는 단일 Markdown 파일로 작성합니다. 자산이 필요한 경우 content-management.md의 기준을 먼저 확인합니다. -->
 <!-- Quartz가 frontmatter의 title을 문서 제목으로 표시하므로 본문에 H1 제목을 반복하지 않습니다. -->
 <!-- 글 성격에 맞지 않는 안내 주석과 섹션은 제거합니다. -->
 
