@@ -9,9 +9,12 @@
 
 ## 신규 기준 적용 문서
 
-| 전체 순번 | 관리 ID | 유형     | 표시 제목                                                | 최초 작성일 | 최종 수정일 | 상태 | 현재 경로                                              | 공개 URL                      |
-| --------- | ------- | -------- | -------------------------------------------------------- | ----------- | ----------- | ---- | ------------------------------------------------------ | ----------------------------- |
-| 001       | PRJ-001 | 프로젝트 | Fashion-MNIST 이미지 분류: CNN으로 10개 의류 클래스 분류 | 2026-09-02  | 2026-09-02  | 초안 | `content/projects/prj-001-fashion-mnist-cnn-20260902/` | `/projects/fashion-mnist-cnn` |
+| 전체 순번 | 관리 ID | 유형     | 표시 제목                                                   | 최초 작성일 | 최종 수정일 | 상태 | 현재 경로                                                                   | 공개 URL                                           |
+| --------- | ------- | -------- | ----------------------------------------------------------- | ----------- | ----------- | ---- | --------------------------------------------------------------------------- | -------------------------------------------------- |
+| 001       | PRJ-001 | 프로젝트 | Fashion-MNIST 이미지 분류: CNN으로 10개 의류 클래스 분류    | 2026-09-02  | 2026-09-02  | 초안 | `content/projects/prj-001-fashion-mnist-cnn-20260902/`                      | `/projects/fashion-mnist-cnn`                      |
+| 002       | PRJ-002 | 프로젝트 | Titanic 생존 예측: EDA 기반 특징 공학 실습과 검증 한계      | 2026-09-03  | 2026-09-03  | 초안 | `content/projects/prj-002-titanic-eda-feature-engineering-20260903/`        | `/projects/titanic-eda-feature-engineering`        |
+| 003       | PRJ-003 | 프로젝트 | Spaceship Titanic 이송 예측: 저장된 실행 기록과 재현성 한계 | 2026-09-03  | 2026-09-03  | 초안 | `content/projects/prj-003-spaceship-titanic-transport-prediction-20260903/` | `/projects/spaceship-titanic-transport-prediction` |
+| 003       | PRJ-003 | 프로젝트 | Spaceship Titanic 이송 예측: 저장된 실행 기록과 재현성 한계 | 2026-09-03  | 2026-09-03  | 초안 | `content/projects/prj-003-spaceship-titanic-transport-prediction-20260903/` | `/projects/spaceship-titanic-transport-prediction` |
 
 ## 기존 블로그 문서: 원문 작성일·순서 확인 대기
 
