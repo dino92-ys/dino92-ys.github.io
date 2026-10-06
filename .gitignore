@@ -1,5 +1,4 @@
 .DS_Store
-.gitignore
 node_modules
 public
 prof
@@ -10,7 +9,6 @@ private/
 .replit
 replit.nix
 content/blog/blog-templates.md
-CLAUDE.md
 
 # 블로그 원고 검증용 임시 자료
 /자료/
